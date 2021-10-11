@@ -5,3 +5,10 @@ Repository for my bioinformatics work
 
 Weixuan Xiang
 
+##some code
+
+
+a <- 2
+a
+a
+
