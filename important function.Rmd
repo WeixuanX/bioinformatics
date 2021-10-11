@@ -9,6 +9,13 @@ output:l_document
 ##the difference bewteen standard deviation and standard error
 se <- function(x)sd(x)/sqrt(length(x))
 
+
+##how to run
+ctrl + enter
+
+##the different between character and object
+
+##object can be caculated and character/strings has ""
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
