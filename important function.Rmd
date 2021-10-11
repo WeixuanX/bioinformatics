@@ -2,15 +2,12 @@
 title: "important function"
 author: "Weixuan Xiang"
 date: "11/10/2021"
-output: htm右对l_document
+output:l_document
 ---
 
 ```{r setup, include=FALSE}
-| $a_1$ | $\hat{|l|}$ | Conclusion |
-| :----: | :----: | :----: |
-#  left justifying |:--|,right justifying |--:|
-|  1   |  1.03 | --- |
-| -1  |  1.78 | Significant |
+##the difference bewteen standard deviation and standard error
+se <- function(x)sd(x)/sqrt(length(x))
 
 knitr::opts_chunk$set(echo = TRUE)
 ```
