@@ -3,7 +3,7 @@ Repository for my bioinformatics work
 
 ## Author
 
-Weixuan Xiang
+Weixuan Xiang in the test-branch
 
 ##some code
 
