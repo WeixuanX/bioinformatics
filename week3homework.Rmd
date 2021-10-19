@@ -1,0 +1,49 @@
+---
+title: "week3homework"
+author: "Weixuan Xiang"
+date: "19/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#library the vroom function to read file
+```{r}
+library(vroom)
+```
+
+##to read the two csv files use the manual pathways
+```{r}
+endanger1 <- vroom("C:/Users/qb21029/OneDrive - University of Bristol/Documents/GitHub/bioinformatics/to_sort_pop_1.csv")
+endanger2 <- vroom("C:/Users/qb21029/OneDrive - University of Bristol/Documents/GitHub/bioinformatics/to_sort_pop_2.csv")
+```
+
+##load the tidyverse
+```{r}
+library("tidyverse")
+```
+
+##using tidyverse join both of these data together into a single tibble
+```{r}
+endanger <- full_join(endanger1,endanger2)
+endanger
+```
+
+##reshape them from wide to long format
+```{r}
+endanger_long <- endanger %>%
+  pivot_longer(cols = -c(species, 
+                         primary_threat, 
+                         secondary_threat, 
+                         tertiary_threat), 
+               names_to = c("population", "date"),
+               names_pattern = "(.*)_(.*)",
+               values_drop_na = F, 
+               values_to = "abundance")
+```
+
+##see the final result
+```{r}
+endanger_long

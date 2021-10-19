@@ -1,0 +1,25 @@
+---
+title: "important function"
+author: "Weixuan Xiang"
+date: "11/10/2021"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true    
+    number_sections: true
+---
+# the difference bewteen standard deviation and standard error
+```{r, eval=FALSE}
+se <- function(x)sd(x)/sqrt(length(x))
+```
+# how to run
+
+ctrl + enter
+
+# the different between character and object
+
+# object can be caculated and character/strings has ""
+
+
+knitr::opts_chunk$set(echo = TRUE)
