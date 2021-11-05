@@ -16,8 +16,8 @@ library(vroom)
 
 ##to read the two csv files use the manual pathways
 ```{r}
-endanger1 <- vroom("C:/Users/qb21029/OneDrive - University of Bristol/Documents/GitHub/bioinformatics/to_sort_pop_1.csv")
-endanger2 <- vroom("C:/Users/qb21029/OneDrive - University of Bristol/Documents/GitHub/bioinformatics/to_sort_pop_2.csv")
+endanger1 <- vroom("C:/Users/qb21029/Documents/GitHub/bioinformatics/to_sort_pop_1.csv")
+endanger2 <- vroom("C:/Users/qb21029/Documents/GitHub/bioinformatics/to_sort_pop_2.csv")
 ```
 
 ##load the tidyverse
