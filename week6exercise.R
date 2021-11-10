@@ -159,14 +159,16 @@ AIC_mods <- data.frame(model = c("mod1", "mod2", "mod3", "mod4"),
 ## rank them by AIC using the order() function
 AIC_mods[order(AIC_mods$AICc),]
 ##找出mod3是最合适实际data，然后用module作图
-##return the predicted (response) values from the model and add them to the single species tibble:
+##return the predicted (response) values from the model and add them to the 
+##single species tibble:
 single_spp$pred_gaussian_log <- predict(mod3,
                                         type="response")
 
 ##return the model residuals and add to the single species tibble:
 single_spp$resid_gaussian_log <- resid(mod3)
 
-##first off let's plot the data again, and add in the predicted values from the model as a line. We can modify the plot we started earlier:
+##first off let's plot the data again, and add in the predicted values from the 
+##model as a line. We can modify the plot we started earlier:
 p5 <- ggplot(single_spp, aes(x=standardised_time, y=abundance)) +
   geom_point() +
   geom_line() +
